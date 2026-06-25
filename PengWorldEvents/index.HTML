@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PengWorld Events - Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            background: #0b0c10;
+            color: #c5c6c7;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 850px;
+            width: 90%;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hub-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .hub-card {
+            background: #1f2833;
+            border: 2px solid #45f3ff36;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            transition: all 0.25s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hub-card img {
+            max-width: 90%;
+            height: auto;
+            transition: transform 0.25s ease-in-out;
+        }
+
+        .hub-card:hover {
+            transform: scale(1.02);
+            background: #2b3744;
+            border-color: #66fcf1;
+            box-shadow: 0 12px 24px rgba(102, 252, 241, 0.15);
+        }
+
+        .hub-card span {
+            font-size: 0.9em;
+            color: #66fcf1;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hub-card.upcoming span {
+            color: #ffcc00;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding-top: 30px;
+            border-top: 1px solid #1f2833;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links { display: flex; gap: 20px; }
+
+        .footer-links a {
+            color: #c5c6c7;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: #66fcf1; }
+
+        .server-ip {
+            color: #66fcf1;
+            font-weight: 700;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 600px) {
+            .hub-card {
+                padding: 20px;
+            }
+            .hub-card img {
+                max-width: 100%;
+            }
+            footer { flex-direction: column; text-align: center; gap: 15px; }
+            .footer-links { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo-container">
+        <img src="PengWorldTitle.png" alt="PengWorld">
+    </div>
+
+    <div class="hub-list">
+        <a href="purgeevent1.html" class="hub-card">
+            <img src="PurgeEvent1title.png" alt="The Purge 1">
+            <span>Completed Event</span>
+        </a>
+
+        <a href="purgeevent2.html" class="hub-card upcoming">
+            <img src="purgeevent2title.png" alt="The Purge 2">
+            <span>Upcoming / Countdown</span>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://discord.gg/wn7tSsKmAf" target="_blank">Discord</a>
+            <a href="https://www.youtube.com/@PengdiMC" target="_blank">YouTube</a>
+            <a href="https://www.twitch.tv/pengdi_" target="_blank">Twitch</a>
+        </div>
+        <div class="server-ip">Minecraft Server IP: PengWorld.Net</div>
+    </footer>
+</div>
+
+</body>
+</html>
